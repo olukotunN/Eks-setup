@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+Kind: ClusterConfig
+
+metadata:
+   name: cloudforce-cluster
+   region: us-east-2
+
+   nodeGroup:
+     -name: cloudforce-cluster
+      instanceType: t3.micro
+      desireCapacity: 3
+      volumeSize: 10
+      ssh:
+        allow: false
